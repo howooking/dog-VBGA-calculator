@@ -1,38 +1,279 @@
+body {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 18px;
+}
+#root {
+  background-color: #fff;
+  box-shadow: 0 7px 29px 0 rgb(100 100 111 / 20%);
+}
 .App {
+  min-height: 100vh;
+  width: 700px;
+}
+
+/* Button */
+.btn {
+  width: auto;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 700;
+  background-color: #ececec;
+}
+.btn_main {
+  background-color: #64c964;
+  color: white;
+}
+.btn_sub {
+  background-color: #fd565f;
+  color: white;
+}
+.btn_circle {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
+  margin: 15px;
+}
+.btn_none {
+  width: 30px;
+  height: 30px;
+  margin: 15px;
+  cursor: default;
+  background-color: rgb(100 100 111 / 0%);
+}
+.btn_main_center {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 700;
+  width: 200px;
+  margin: 10px auto;
+  display: block;
+}
+.btn_sub_center {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 700;
+  width: 200px;
+  margin: auto;
+  background-color: #fd565f;
+  color: white;
+  display: block;
+  margin-top: 30px;
+}
+
+/* Header */
+header {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+
+  justify-content: space-between;
+}
+header button {
+  margin-left: 5px;
+}
+
+/* Table */
+.Table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table td,
+th {
+  width: 25%;
+  border: 0.1px solid #ccc;
+  text-align: center;
+  border-left: none;
+  padding: 3px 0;
+}
+table td:last-child {
+  border-right: none;
+}
+table th:last-child {
+  border: none;
+}
+
+input {
+  font-size: 18px;
+  width: 80%;
+  margin: 2px 0;
+  border: none;
+  background-color: #ececec;
+  border-radius: 5px;
+  padding: 5px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table select {
+  cursor: pointer;
+  width: 80%;
+  font-size: 3px;
+  border: none;
+  background-color: #ececec;
+  border-radius: 5px;
+  padding: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.범위랑버튼 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.범위랑버튼 .addRR {
+  border: none;
+  border-radius: 2px;
+  margin-left: 2px;
+  width: 12px;
+  height: 12px;
+  line-height: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: #64c964;
+  color: white;
+}
+.범위랑버튼 .resetRR {
+  border: none;
+  border-radius: 2px;
+  margin-left: 3px;
+  width: 12px;
+  height: 12px;
+  line-height: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: #fd565f;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Add */
+.Add {
+  box-shadow: 0 0px 0px 1000px rgba(128, 128, 133, 0.5);
+}
+.machineName {
+  text-align: center;
+  padding: 5px 0;
+}
+.machineName input {
+  width: 50%;
+  margin: 2px 0;
+  border: none;
+  background-color: #ececec;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-250px);
+  top: 70px;
+  background-color: white;
+  border-radius: 5px;
+}
+.Add table {
+  width: 500px;
+}
+.Add table td,
+th {
+  width: 25%;
+  border: 0.1px solid #ccc;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.Add table td:last-child {
+  border: 0.1px solid #ccc;
+}
+.Add table th:last-child {
+  border: 0.1px solid #ccc;
+}
+.Add button {
+  margin: 5px;
+}
+
+/* Step */
+.Step {
+  background-color: rgb(100 100 111 / 80%);
+  position: absolute;
+  top: 0;
+  width: 700px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Step .center {
+  display: flex;
+  flex-direction: column;
+}
+.Step .center .page {
+  background-color: #fff;
+  width: 550px;
+  border-radius: 5px 5px 0 0;
+  padding: 11px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.Step .center .page .tip {
+  font-size: 13px;
+  color: gray;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.Step .center .page p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.Step .center .close {
+  cursor: pointer;
+  border: none;
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+  font-weight: 700;
+  background-color: #fd565f;
+  color: white;
+}
+.Step .center .page .aspect_select {
+  border: none;
+  background-color: #ececec;
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 10px;
+  font-size: 15px;
+}
+.Step .center .page .dummy {
+  color: white;
+}
+
+/* DDx */
+.DDx {
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  height: 570px;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-300px);
+  width: 600px;
+  box-shadow: 0 0px 0px 1000px rgba(128, 128, 133, 0.5);
+  padding: 20px;
+  box-sizing: border-box;
+  line-height: 1.2;
 }
